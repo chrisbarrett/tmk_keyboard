@@ -140,9 +140,10 @@ endif
 build: $(TARGET).hex
 
 upload: build
-	if [ -f $(USB) ] && [ ! -r $(USB) ]; then echo "Warning: no read permission!"; fi; \
-	while [ ! -r $(USB) ]; do sleep 1; done; \
-	avrdude -p $(MCU) -c avr109 -U flash:w:$(TARGET).hex -P $(USB)
+	while [ -z "$$(find /dev -maxdepth 1 -name 'cu.usbmodem*')" ]; do sleep 1; done; \
+	DEVICE=$$(find /dev -maxdepth 1 -name 'cu.usbmodem*'); \
+	avrdude -p $(MCU) -c avr109 -U flash:w:$(TARGET).hex -P "$$DEVICE"
+
 
 include $(TOP_DIR)/protocol/lufa.mk
 include $(TOP_DIR)/common.mk
@@ -150,4 +151,3 @@ include $(TOP_DIR)/rules.mk
 
 udev:
 	cp a-star.rules /etc/udev/rules.d/
-
