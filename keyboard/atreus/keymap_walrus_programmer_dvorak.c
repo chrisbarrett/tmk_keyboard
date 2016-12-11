@@ -30,8 +30,8 @@ const uint16_t PROGMEM fn_actions[] = {
   [3] = ACTION_FUNCTION(BOOTLOADER),
 
   // Modifier keys use different behaviours when tapped or held.
-  [4] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_DOWN),
-  [5] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_UP),
+  [4] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_UP),
+  [5] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DOWN),
   [6] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_ENT),
 };
 
