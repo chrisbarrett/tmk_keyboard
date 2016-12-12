@@ -9,9 +9,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KEYMAP(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, \
          KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, \
          KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, \
-         KC_ESC, KC_TAB, KC_LGUI, KC_LSFT, KC_BSPC, KC_FN4, KC_FN5,         \
+         KC_ESC, KC_TAB, KC_LGUI, KC_LCTL, KC_BSPC, KC_LSFT, KC_FN0,         \
          // KC_MINS and KC_LBRC are inverse-dvorakized
-         KC_SPC, KC_FN0, KC_QUOT, KC_LBRC, KC_ENT),                     \
+         KC_SPC, KC_LALT, KC_QUOT, KC_LBRC, KC_ENT),   \
 
   /* 1: fn with undvorak-ized punctuation */
   KEYMAP(KC_1,            KC_2,        KC_3,           KC_4,         KC_5,                         KC_6,    KC_7,           KC_8,    KC_9,    KC_0, \
@@ -28,10 +28,6 @@ const uint16_t PROGMEM fn_actions[] = {
   [1] = ACTION_LAYER_ON(2, 1),  // switch to layer 2
   [2] = ACTION_LAYER_OFF(2, 1),  // switch back to layer 0
   [3] = ACTION_FUNCTION(BOOTLOADER),
-
-  // Modifier keys use different behaviours when tapped or held.
-  [4] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_UP),
-  [5] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DOWN),
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
