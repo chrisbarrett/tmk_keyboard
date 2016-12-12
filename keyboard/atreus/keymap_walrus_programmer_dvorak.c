@@ -9,7 +9,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KEYMAP(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, \
          KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, \
          KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, \
-         KC_ESC, KC_TAB, KC_LGUI, KC_FN6, KC_BSPC, KC_FN4, KC_FN5,     \
+         KC_ESC, KC_TAB, KC_LGUI, KC_LSFT, KC_BSPC, KC_FN4, KC_FN5,         \
          // KC_MINS and KC_LBRC are inverse-dvorakized
          KC_SPC, KC_FN0, KC_QUOT, KC_LBRC, KC_ENT),                     \
 
@@ -32,7 +32,6 @@ const uint16_t PROGMEM fn_actions[] = {
   // Modifier keys use different behaviours when tapped or held.
   [4] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_UP),
   [5] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DOWN),
-  [6] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_ENT),
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
