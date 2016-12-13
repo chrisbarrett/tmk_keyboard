@@ -11,14 +11,14 @@
  * between standard dvorak and Programmer Dvorak.
  */
 
-#define DV_EXCLMRK    SHIFT(KC_MINUS)
-#define DV_AT         SHIFT(KC_RBRACKET)
+#define DV_EXCLMRK    KC_MINUS
+#define DV_AT         KC_RBRACKET
 #define DV_PCT        SHIFT(KC_1)
 #define DV_LBRKT      KC_3
 #define DV_RBRKT      KC_4
 #define DV_HASH       KC_EQUAL
 #define DV_CARET      SHIFT(KC_RBRACKET)
-#define DV_DOLLAR     SHIFT(KC_QUOTE)
+#define DV_DOLLAR     KC_GRAVE
 #define DV_PIPE       KC_BSLASH
 #define DV_BSLASH     SHIFT(KC_BSLASH)
 #define DV_LBRACE     KC_2
@@ -26,7 +26,7 @@
 #define DV_LPAREN     KC_5
 #define DV_RPAREN     KC_8
 #define DV_AMP        KC_1
-#define DV_TICK       KC_EQUAL
+#define DV_GRAVE      KC_EQUAL
 #define DV_MINUS      KC_QUOT
 #define DV_SLASH      KC_LBRACKET
 
