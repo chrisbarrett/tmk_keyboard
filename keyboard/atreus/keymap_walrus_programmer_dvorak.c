@@ -20,6 +20,7 @@
 #define DV_CARET      SHIFT(KC_RBRACKET)
 #define DV_TILDE      SHIFT(KC_GRAVE)
 #define DV_DOLLAR     KC_GRAVE
+#define DV_ASTERISK   KC_7
 #define DV_PIPE       KC_BSLASH
 #define DV_BSLASH     SHIFT(KC_BSLASH)
 #define DV_LBRACE     KC_2
@@ -59,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * L2  insert super shift  = ctrl || alt space   fn    .     0    #
    */
   KEYMAP(DV_TILDE, DV_AT, DV_CARET, DV_DOLLAR, DV_PCT,               \
-         KC_PGUP, DV_7, DV_8, DV_9, KC_KP_ASTERISK,                  \
+         KC_PGUP, DV_7, DV_8, DV_9, DV_ASTERISK,                     \
          DV_EXCLMRK, DV_AMP, DV_LBRKT, DV_LPAREN, DV_LBRACE,         \
          KC_PGDN, DV_4, DV_5, DV_6, KC_KP_PLUS,                      \
          DV_BSLASH, DV_PIPE, DV_RBRKT, DV_RPAREN, DV_RBRACE,         \
