@@ -31,6 +31,17 @@
 #define DV_MINUS      KC_QUOT
 #define DV_SLASH      KC_LBRACKET
 
+#define DV_1        SHIFT(KC_5)
+#define DV_2        SHIFT(KC_8)
+#define DV_3        SHIFT(KC_4)
+#define DV_4        SHIFT(KC_9)
+#define DV_5        SHIFT(KC_3)
+#define DV_6        SHIFT(KC_0)
+#define DV_7        SHIFT(KC_2)
+#define DV_8        SHIFT(KC_MINUS)
+#define DV_9        SHIFT(KC_6)
+#define DV_0        SHIFT(KC_7)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 0: qwerty */
   KEYMAP(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,    \
@@ -46,14 +57,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *  \    |      }     )    ]      ||       `     1     2     3    -
    * L2  insert super shift  = ctrl || alt space   fn    .     0    #
    */
-  KEYMAP(DV_TILDE, DV_AT, DV_CARET, DV_DOLLAR, DV_PCT,                  \
-         KC_PGUP, KC_P7, KC_P8, KC_P9, KC_KP_ASTERISK,                  \
-         DV_EXCLMRK, DV_AMP, DV_LBRKT, DV_LPAREN, DV_LBRACE,            \
-         KC_PGDN, KC_P4, KC_P5, KC_P6, KC_KP_PLUS,                      \
-         DV_BSLASH, DV_PIPE, DV_RBRKT, DV_RPAREN, DV_RBRACE,            \
-         DV_GRAVE, KC_P1, KC_P2, KC_P3, KC_KP_MINUS,                    \
+  KEYMAP(DV_TILDE, DV_AT, DV_CARET, DV_DOLLAR, DV_PCT,               \
+         KC_PGUP, DV_7, DV_8, DV_9, KC_KP_ASTERISK,                  \
+         DV_EXCLMRK, DV_AMP, DV_LBRKT, DV_LPAREN, DV_LBRACE,         \
+         KC_PGDN, DV_4, DV_5, DV_6, KC_KP_PLUS,                      \
+         DV_BSLASH, DV_PIPE, DV_RBRKT, DV_RPAREN, DV_RBRACE,         \
+         DV_GRAVE, DV_1, DV_2, DV_3, KC_KP_MINUS,                    \
          KC_FN1, SHIFT(KC_INS), KC_LGUI, KC_FN4, KC_KP_EQUAL, KC_LCTL, KC_LALT, \
-         KC_SPC, KC_FN0, KC_KP_DOT, KC_KP_0, DV_HASH),                  \
+         KC_SPC, KC_FN0, KC_KP_DOT, DV_0, DV_HASH),                  \
 
   /* 2: arrows and function keys */
   KEYMAP(KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_UP, KC_F7, KC_F8, KC_F9, KC_F10, \
