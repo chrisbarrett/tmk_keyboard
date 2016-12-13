@@ -30,6 +30,7 @@
 #define DV_GRAVE      KC_EQUAL
 #define DV_MINUS      KC_QUOT
 #define DV_SLASH      KC_LBRACKET
+#define DV_EQUAL      KC_6
 
 #define DV_1        SHIFT(KC_5)
 #define DV_2        SHIFT(KC_8)
@@ -63,8 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_PGDN, DV_4, DV_5, DV_6, KC_KP_PLUS,                      \
          DV_BSLASH, DV_PIPE, DV_RBRKT, DV_RPAREN, DV_RBRACE,         \
          DV_GRAVE, DV_1, DV_2, DV_3, KC_KP_MINUS,                    \
-         KC_FN1, SHIFT(KC_INS), KC_LGUI, KC_FN4, KC_KP_EQUAL, KC_LCTL, KC_LALT, \
-         KC_SPC, KC_FN0, KC_KP_DOT, DV_0, DV_HASH),                  \
+         KC_FN1, SHIFT(KC_INS), KC_LGUI, KC_FN4, DV_EQUAL, KC_LCTL, KC_LALT, \
+         KC_SPC, KC_FN0, KC_KP_DOT, DV_0, DV_HASH),                     \
 
   /* 2: arrows and function keys */
   KEYMAP(KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_UP, KC_F7, KC_F8, KC_F9, KC_F10, \
