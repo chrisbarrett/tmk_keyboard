@@ -28,7 +28,7 @@
 #define DV_LPAREN     KC_5
 #define DV_RPAREN     KC_8
 #define DV_AMP        KC_1
-#define DV_GRAVE      KC_EQUAL
+#define DV_GRAVE      SHIFT(KC_EQUAL)
 #define DV_MINUS      KC_QUOT
 #define DV_SLASH      KC_LBRACKET
 #define DV_EQUAL      KC_6
