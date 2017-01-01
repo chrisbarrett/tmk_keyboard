@@ -44,6 +44,8 @@
 #define DV_9        SHIFT(KC_6)
 #define DV_0        SHIFT(KC_7)
 
+/* Keymaps */
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* 0: qwerty */
   KEYMAP(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,    \
@@ -68,11 +70,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_FN1, SHIFT(KC_INS), KC_LGUI, DV_EQUAL, KC_BSPC, KC_FN4, KC_FN5, \
          KC_SPC, KC_FN0, KC_KP_DOT, DV_0, DV_HASH),                     \
 
-  /* 2: arrows and function keys */
-  KEYMAP(KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_UP, KC_F7, KC_F8, KC_F9, KC_F10, \
-         KC_DEL, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_DOWN, KC_F4, KC_F5, KC_F6, KC_F11, \
-         KC_NO, KC_NO, KC_NO, KC_NO, KC_FN3, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12, \
-         KC_NO, KC_LSFT, KC_LGUI, KC_FN4, KC_BSPC, KC_LCTL, KC_LALT, KC_SPC, KC_FN2, KC_NO, KC_NO, KC_ENT)
+  /* 2: arrows and function keys
+   *
+   *        home   up  end   pgup       ||      up     F7    F8    F9   F10
+   *  del   left  down right pgdn       ||     down    F4    F5    F6   F11
+   * mouse volup             reset      ||             F1    F2    F3   F12
+   *       voldn  super shift bksp ctrl || alt space   L0  prtsc scroll pause
+   */
+  KEYMAP(KC_NO, KC_HOME, KC_UP, KC_END, KC_PGUP,                        \
+         KC_UP, KC_F7, KC_F8, KC_F9, KC_F10,                            \
+         KC_DEL, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN,                   \
+         KC_DOWN, KC_F4, KC_F5, KC_F6, KC_F11,                          \
+         KC_FN22, KC__VOLUP, KC_NO, KC_NO, KC_FN3, KC_NO,               \
+         KC_F1, KC_F2, KC_F3, KC_F12,                                   \
+         KC_NO, KC__VOLDOWN, KC_LGUI, KC_FN4, KC_BSPC, KC_LCTL,         \
+         KC_LALT, KC_SPC, KC_FN2, KC_NO, KC_NO, KC_ENT),
+
+  /* 3: mouse control, reached by fn+esc, then holding z*/
+  KEYMAP(
+         //       left    up/down  right                              mouse wheel: left up/down right
+         KC_NO,   KC_NO,   KC_FN6,  KC_NO,   KC_NO,                   KC_NO,   KC_NO,   KC_FN10, KC_NO,   KC_NO,   \
+         KC_NO,   KC_FN8,  KC_FN7,  KC_FN9,  KC_NO,                   KC_NO,   KC_FN12, KC_FN11, KC_FN13, KC_NO, \
+         //       acceleration settings                               buttons:    left   middle   right
+         KC_NO,   KC_FN19, KC_FN20, KC_FN21, KC_NO,                   KC_FN17,   KC_FN14, KC_FN16, KC_FN15, KC_FN18, \
+         KC_TRNS, KC_NO,   KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_NO,     KC_FN23,  KC_NO,   KC_NO,   KC_NO \
+         )
 };
 
 const uint16_t PROGMEM fn_actions[] = {
@@ -82,6 +104,26 @@ const uint16_t PROGMEM fn_actions[] = {
   [3] = ACTION_FUNCTION(BOOTLOADER),
   [4] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_UP),
   [5] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DOWN),
+
+  [6] = ACTION_MOUSEKEY(KC_MS_U), // mouse movement
+  [7] = ACTION_MOUSEKEY(KC_MS_D),
+  [8] = ACTION_MOUSEKEY(KC_MS_L),
+  [9] = ACTION_MOUSEKEY(KC_MS_R),
+  [10] = ACTION_MOUSEKEY(KC_WH_U), // wheel
+  [11] = ACTION_MOUSEKEY(KC_WH_D),
+  [12] = ACTION_MOUSEKEY(KC_WH_L),
+  [13] = ACTION_MOUSEKEY(KC_WH_R),
+  [14] = ACTION_MOUSEKEY(KC_BTN1), // clicks
+  [15] = ACTION_MOUSEKEY(KC_BTN2),
+  [16] = ACTION_MOUSEKEY(KC_BTN3),
+  [17] = ACTION_MOUSEKEY(KC_BTN4),
+  [18] = ACTION_MOUSEKEY(KC_BTN5),
+  [19] = ACTION_MOUSEKEY(KC_ACL0), // acceleration settings
+  [20] = ACTION_MOUSEKEY(KC_ACL1),
+  [21] = ACTION_MOUSEKEY(KC_ACL2),
+
+  [22] = ACTION_LAYER_ON(3, 1),  // switch to layer 3
+  [23] = ACTION_LAYER_OFF(3, 1),  // switch back to layer 2
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
