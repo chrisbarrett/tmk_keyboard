@@ -54,18 +54,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* 1: fn with undvorak-ized punctuation
    *
-   *  ~    @      ^     $    %      ||     pgup    7     8     9    *
-   *  !    &      {     (    [      ||     pgdn    4     5     6    +
-   *  \    |      }     )    ]      ||       `     1     2     3    -
-   * L2  insert super shift  = ctrl || alt space   fn    .     0    #
+   *  ~    @      ^     $    %        ||     pgup    7     8     9    *
+   *  !    &      {     (    [        ||     pgdn    4     5     6    +
+   *  \    |      }     )    ]        ||       `     1     2     3    -
+   * L2  insert super   =  bkspc ctrl || alt space   fn    .     0    #
    */
-  KEYMAP(DV_TILDE, DV_AT, DV_CARET, DV_DOLLAR, DV_PCT,               \
-         KC_PGUP, DV_7, DV_8, DV_9, DV_ASTERISK,                     \
-         DV_EXCLMRK, DV_AMP, DV_LBRKT, DV_LPAREN, DV_LBRACE,         \
-         KC_PGDN, DV_4, DV_5, DV_6, KC_KP_PLUS,                      \
-         DV_BSLASH, DV_PIPE, DV_RBRKT, DV_RPAREN, DV_RBRACE,         \
-         DV_GRAVE, DV_1, DV_2, DV_3, KC_KP_MINUS,                    \
-         KC_FN1, SHIFT(KC_INS), KC_LGUI, KC_FN4, DV_EQUAL, KC_LCTL, KC_LALT, \
+  KEYMAP(DV_TILDE, DV_AT, DV_CARET, DV_DOLLAR, DV_PCT,                  \
+         KC_PGUP, DV_7, DV_8, DV_9, DV_ASTERISK,                        \
+         DV_EXCLMRK, DV_AMP, DV_LBRKT, DV_LPAREN, DV_LBRACE,            \
+         KC_PGDN, DV_4, DV_5, DV_6, KC_KP_PLUS,                         \
+         DV_BSLASH, DV_PIPE, DV_RBRKT, DV_RPAREN, DV_RBRACE,            \
+         DV_GRAVE, DV_1, DV_2, DV_3, KC_KP_MINUS,                       \
+         KC_FN1, SHIFT(KC_INS), KC_LGUI, DV_EQUAL, KC_BSPC, KC_FN4, KC_FN5, \
          KC_SPC, KC_FN0, KC_KP_DOT, DV_0, DV_HASH),                     \
 
   /* 2: arrows and function keys */
