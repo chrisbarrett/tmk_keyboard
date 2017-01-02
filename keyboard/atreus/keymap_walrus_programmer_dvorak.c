@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_NO,   KC_NO,   KC_FN6,  KC_NO,   KC_NO,                   KC_NO,   KC_NO,   KC_FN11, KC_NO,   KC_NO, \
          KC_NO,   KC_FN8,  KC_FN7,  KC_FN9,  KC_NO,                   KC_NO,   KC_FN12, KC_FN10, KC_FN13, KC_NO, \
          //       acceleration settings                               buttons:    left   middle   right
-         KC_NO,   KC_FN19, KC_FN20, KC_FN21, KC_NO,                   KC_FN17,   KC_FN14, KC_FN16, KC_FN15, KC_FN18, \
+         KC_ESC,  KC_FN19, KC_FN20, KC_FN21, KC_NO,                   KC_FN17,   KC_FN14, KC_FN16, KC_FN15, KC_FN18, \
          KC_TRNS, KC_NO,   KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_NO,     KC_FN23,  KC_NO,   KC_NO,   KC_NO \
          )
 };
