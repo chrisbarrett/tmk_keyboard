@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *        home   up  end   pgup       ||      up     F7    F8    F9   F10
    *  del   left  down right pgdn       ||     down    F4    F5    F6   F11
    * mouse volup             reset      ||             F1    F2    F3   F12
-   *       voldn  super shift bksp ctrl || alt space   L0  prtsc scroll pause
+   *       voldn  super shift bksp ctrl || alt space   L0  prtsc scroll enter
    */
   KEYMAP(KC_NO, KC_HOME, KC_UP, KC_END, KC_PGUP,                        \
          KC_UP, KC_F7, KC_F8, KC_F9, KC_F10,                            \
